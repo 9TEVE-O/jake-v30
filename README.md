@@ -16,21 +16,19 @@ Then visit `http://localhost:8000`.
 
 ## GitHub Pages
 
-1. Push these files to a GitHub repository.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the default branch and `/ (root)`.
-5. Save.
+1. Open **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Select `main` and `/ (root)`.
+4. Save.
 
-The site uses only HTML, CSS, JavaScript and local photos. The airhorn is synthesised in the browser with Web Audio; there is no copyrighted audio file.
+The site is plain HTML, CSS and JavaScript. The birthday hero photo is embedded directly in `index.html` so the live build has no image-path dependency. The airhorn is synthesised in the browser with Web Audio; there is no copyrighted audio file.
 
 ## Files
 
-- `index.html` — experience and copy
+- `index.html` — birthday experience, copy and embedded hero image
 - `styles.css` — layout, responsive design and animation
-- `script.js` — boot sequence, airhorn, confetti, developer-mode test
+- `script.js` — boot sequence, airhorn, confetti and developer-mode test
 - `30-for-30.md` — hidden coding/ChatGPT/GitHub birthday extra
-- `assets/` — supplied birthday photos
 
 ## Jake
 
