@@ -4,7 +4,7 @@ A birthday release disguised as a tiny web app.
 
 **LIVE // PRODUCTION:** https://9teve-o.github.io/jake-v30/
 
-![JAKE v30.0.0 release card](social-card.svg)
+![JAKE v30.0.0 release card](social-card.png)
 
 ## Release surface
 
