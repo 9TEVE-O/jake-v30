@@ -2,6 +2,10 @@
 
 A birthday release disguised as a tiny web app.
 
+**LIVE // PRODUCTION:** https://9teve-o.github.io/jake-v30/
+
+![JAKE v30.0.0 release card](social-card.svg)
+
 ## Run it
 
 No build step. No dependencies.
@@ -16,10 +20,7 @@ Then visit `http://localhost:8000`.
 
 ## GitHub Pages
 
-1. Open **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select `main` and `/ (root)`.
-4. Save.
+Production is deployed from `main` at the repository root.
 
 The site is plain HTML, CSS and JavaScript. The birthday hero photo is embedded directly in `index.html` so the live build has no image-path dependency. The airhorn is synthesised in the browser with Web Audio; there is no copyrighted audio file.
 
@@ -29,6 +30,9 @@ The site is plain HTML, CSS and JavaScript. The birthday hero photo is embedded 
 - `styles.css` — layout, responsive design and animation
 - `script.js` — boot sequence, airhorn, confetti and developer-mode test
 - `30-for-30.md` — hidden coding/ChatGPT/GitHub birthday extra
+- `social-card.svg` — release artwork for the repository/share surface
+- `404.html` — branded recovery route instead of a dead end
+- `robots.txt` + `sitemap.xml` — crawl boundary for the public release
 
 ## Jake
 

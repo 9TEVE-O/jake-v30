@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">JAKE v30.0.0</title>
+  <desc id="desc">Thirty years in development. Birthday production release.</desc>
+  <defs>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M 38 0 L 0 0 0 38" fill="none" stroke="#152019" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#07090b"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="28" fill="#0a0c0f" stroke="#2d4137" stroke-width="2"/>
+  <line x1="48" y1="108" x2="1152" y2="108" stroke="#24282e" stroke-width="2"/>
+  <circle cx="84" cy="78" r="8" fill="#ff5f57"/>
+  <circle cx="118" cy="78" r="8" fill="#febc2e"/>
+  <circle cx="152" cy="78" r="8" fill="#28c840"/>
+  <text x="190" y="88" fill="#a5abb5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28">jake@30:~/birthday-release</text>
+  <text x="100" y="178" fill="#7dff96" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="26" font-weight="700">PRIVATE BUILD // FAMILY RELEASE</text>
+  <text x="94" y="326" fill="#f5f1e8" font-family="Inter, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="-6">JAKE</text>
+  <text x="100" y="397" fill="#ff3b30" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">v30.0.0</text>
+  <text x="100" y="468" fill="#62d9ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="700">30 YEARS IN DEVELOPMENT</text>
+  <text x="100" y="522" fill="#dce2eb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="700">BUILD SUCCEEDED // SHIP IT.</text>
+</svg>
