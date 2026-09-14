@@ -38,11 +38,41 @@
   </style>
 </head>
 <body>
-  <!-- Release surface v30.0.1. Birthday experience preserved byte-for-byte in app.html. -->
+  <!-- Release surface v30.0.1. Birthday experience preserved in app.html; the canonical shell adds the approved photo archive. -->
   <p class="release-summary">JAKE v30.0.0 — birthday production release. Thirty years in development. Build succeeded. Ship it.</p>
   <main class="app-shell">
     <iframe src="app.html" title="JAKE v30.0.0 birthday release" allow="autoplay" loading="eager"></iframe>
   </main>
   <noscript>JavaScript is disabled. <a href="app.html">Open JAKE v30.0.0 directly.</a></noscript>
+  <script>
+    const frame = document.querySelector('iframe');
+    frame.addEventListener('load', () => {
+      const doc = frame.contentDocument;
+      if (!doc || doc.querySelector('.gallery')) return;
+      const releaseNotes = doc.querySelector('.release-notes');
+      if (!releaseNotes) return;
+
+      const gallery = doc.createElement('section');
+      gallery.className = 'gallery';
+      gallery.setAttribute('aria-labelledby', 'gallery-title');
+      gallery.innerHTML = `
+        <div class="section-head">
+          <p class="eyebrow">PHOTO LOG // 30 YEARS</p>
+          <h2 id="gallery-title">Thirty years in production.</h2>
+        </div>
+        <div class="photo-grid">
+          <figure class="tall">
+            <img src="jake-bboy.webp" alt="Jake breakdancing beside a colourful graffiti wall" loading="lazy" />
+          </figure>
+          <figure class="tall">
+            <img src="jake-portrait.webp" alt="Jake standing in front of a wall covered in flowering vines" loading="lazy" />
+          </figure>
+          <figure class="wide">
+            <img src="jake-family.webp" alt="Jake with family and friends at night" loading="lazy" />
+          </figure>
+        </div>`;
+      releaseNotes.insertAdjacentElement('afterend', gallery);
+    });
+  </script>
 </body>
 </html>
