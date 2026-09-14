@@ -49,7 +49,6 @@ deployBtn.addEventListener('click', () => {
   fireConfetti(2400);
   boot.classList.add('hidden');
   release.classList.remove('hidden');
-  requestAnimationFrame(() => release.classList.add('system-online'));
   window.scrollTo({ top: 0, behavior: 'instant' });
 });
 
@@ -139,9 +138,13 @@ function fireConfetti(duration = 1800) {
   function frame(now) {
     ctx.clearRect(0, 0, innerWidth, innerHeight);
     pieces.forEach(p => {
-      p.x += p.vx; p.y += p.vy; p.spin += .1;
-      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.spin);
-      ctx.fillStyle = `hsl(${p.hue} 90% 60%)`;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.spin += .08;
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.spin);
+      ctx.fillStyle = `hsl(${p.hue} 88% 60%)`;
       ctx.fillRect(-p.r, -p.r / 2, p.r * 2, p.r);
       ctx.restore();
     });
@@ -290,6 +293,15 @@ function installNodeNetwork() {
   }, { passive: true });
 }
 
+// Jake feedback patch: use a real repository asset instead of the fragile inline image payload.
+function installReliableHeroImage() {
+  const image = document.querySelector('.hero-photo img');
+  if (!image) return;
+  image.src = 'hero-jake.jpg';
+  image.alt = 'Jake breakdancing';
+}
+
+installReliableHeroImage();
 installLanguageRack();
 installCodeRain();
 installNodeNetwork();
